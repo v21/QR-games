@@ -4,6 +4,6 @@ This is a project to make a QR code you can scan and get a playable little JS ga
 
 Currently everything is within the file generateQR.py . Run this in Python, and if all works, you should see the QR code appear on screen.
 
-The code within is specified within in the data variable. The image is saved to qr{timestamp}.png, and then displayed with feh.
+The code within is specified within in the data variable. The image is saved to qr{data hash}.png, and then displayed with feh.
 
 Have fun!

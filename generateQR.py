@@ -1,5 +1,5 @@
 from PyQRNative import *
-import time, os
+import time, os, hashlib
 qr = QRCode(18, QRErrorCorrectLevel.L)
 
 qr.mode = QRMode.MODE_ALPHA_NUM
@@ -20,7 +20,10 @@ print "link is " + data
 
 im = qr.makeImage()
 
-with open("/home/v21/qr" + str(time.time()) + ".png", "wb") as f:
+data_hash = hashlib.md5(data)
+
+
+with open("qr" + data_hash.hexdigest() + ".png", "wb") as f:
 
     im.save(f)
 
